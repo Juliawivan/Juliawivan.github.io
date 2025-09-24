@@ -36,7 +36,7 @@
 <script>
 //Tähän kirjoita oman JSON tietueesi URL
 
-fetch('file:///C:/Users/Julia/bootstrap/Juliawivan.github.io/jsonindex.html#')
+fetch('https://juliawivan.github.io/jsonindex.html#')
 
 
 // Muunnetaan vastaus JSON muotoon
@@ -64,19 +64,19 @@ kerro(responseJson);
 document.getElementById("vastaus").innerHTML = "<p>Tietoa ei pystytä hakemaan</p>";
 })
 
-function kerro(obj) {}
-let tiedot = "<h1>" + obj.otsikko + "</h1><br>" + obj.kuvaus + ">br><hr>"
+function kerro(obj) {
+let tiedot = "<h1>" + obj.otsikko + "</h1><br>" + obj.kuvaus + "<br><hr>"
 + "<p><img src=" + obj.kuva + "></p>"
 + "<h3>" + "Opintojakso" + "</h3>" + "Nimi: " + obj.opintojakso.nimi + "<br>"
 
 tiedot += "<p><h3> Aiheet </h3>";
-for (var i = 0; i < obj.tekniikat[i].length; i++) {
+for (var i = 0; i < obj.tekniikat.length; i++) {
     tiedot += "<b>Aihe: " + obj.tekniikat[i].aihe + "</b>";
     tiedot += " <a href=" + obj.tekniikat[i].linkki + ">" + obj.tekniikat[i].linkki + "</a>" + "<br>";
     tiedot += "</p>";
     document.getElementById("vastaus").innerHTML= tiedot;
-}
-
+}}
+<div id="vastaus"></div>
 </script>
 </body>
 
