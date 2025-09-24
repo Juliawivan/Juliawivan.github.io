@@ -1,7 +1,27 @@
 {
-"employees":[
-    {"firstName":"John", "lastName":"Doe"},
-    {"firstName":"Anna", "lastName":"Smith"},
-    {"firstName":"Peter", "lastName":"Jones"}
-]
+  "yritys": "Tico Cafe",
+  "yhteystiedot": {
+    "osoite": "Ratapihantie 13, Helsinki",
+    "puhelin": "040 404 4040",
+    "email": "info@ticocafe.com"
+  },
+  "tuotteet": [
+    "makeat kahvileivät",
+    "suolaiset piiraat",
+    "erikoiskahvit"
+  ],
+  "henkilokunta": [
+    {
+      "nimi": "Mikko Mallikas",
+      "titteli": "toimitusjohtaja"
+    },
+    {
+      "nimi": "Anna Malli",
+      "titteli": "barista"
+    },
+    {
+      "nimi": "Esa Merkki",
+      "titteli": "kondiittori"
+    }
+  ]
 }
