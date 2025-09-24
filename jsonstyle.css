@@ -1,0 +1,44 @@
+
+ main {
+    background-color:#F1F5F4; /* Taustaväri koko sivustolle */
+    font-family: Arial, sans-serif; /* Fontti koko sivustolle */
+    margin: 0; /* Poistaa oletus marginaalit */
+    padding: 5%;
+    
+ }
+ nav {
+  margin-bottom: 1%;
+ }
+ h3
+ {
+  font-weight: 800;
+ }
+
+
+ /* BOOTSRAP NAVI VÄRIT */
+
+ /* taustan väri */
+ .navbar-custom {
+    background-color:rgb(67, 167, 249);
+  }
+  
+  /* Tekstin väri */
+  .navbar-custom .navbar-text{
+    color:rgb(96, 26, 195);
+  }
+  
+  /* linkin väri */
+  .navbar-custom .navbar-nav .nav-link {
+    color:rgb(23, 22, 23);
+  }
+  
+  /* aktiivisen & hover-linkin väri */  
+  .navbar-custom .nav-item.active .nav-link,
+  .navbar-custom .nav-item:hover .nav-link {
+    color: #ffffff;
+  }
+
+  .navbar-custom a{
+    text-decoration: none;
+
+  }
