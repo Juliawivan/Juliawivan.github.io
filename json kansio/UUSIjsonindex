@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head> 
+  <title>Jullen sivut</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+<!-- Navigaatio -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Jullen testisivut</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Valikon vaihto">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#">Etusivu</a></li>
+        <li class="nav-item"><a class="nav-link" href="#ruudukko">Ruudukko ja kortit</a></li>
+        <li class="nav-item"><a class="nav-link" href="#accordion">Haitari ja taulukko</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Karuselli -->
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://picsum.photos/1200/400?random=1" class="d-block w-100" alt="Kuva 1">
+    </div>
+    <div class="carousel-item">
+      <img src="https://picsum.photos/1200/400?random=2" class="d-block w-100" alt="Kuva 2">
+    </div>
+    <div class="carousel-item">
+      <img src="https://picsum.photos/1200/400?random=3" class="d-block w-100" alt="Kuva 3">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!-- Ruudukko -->
+<h2 id="ruudukko" class="mb-4">Ruudukko</h2>
+<div class="container text-center">
+  <div class="row">
+    <div class="col">1 of 3</div>
+    <div class="col-6">2 of 3</div>
+    <div class="col">3 of 3</div>
+  </div>
+  <div class="row">
+    <div class="col">1 of 3</div>
+    <div class="col-5">2 of 3</div>
+    <div class="col">3 of 3</div>
+  </div>
+</div>
+
+<!-- Kortit -->
+<h2 id="kortit" class="my-4">Kortit</h2>
+<div class="row">
+  <div class="col-md-4">
+    <div class="card h-100">
+      <img src="https://picsum.photos/300/200?random=4" class="card-img-top" alt="Kortti 1">
+      <div class="card-body">
+        <h5 class="card-title">Kortti 1</h5>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card h-100">
+      <img src="https://picsum.photos/300/200?random=5" class="card-img-top" alt="Kortti 2">
+      <div class="card-body">
+        <h5 class="card-title">Kortti 2</h5>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card h-100">
+      <img src="https://picsum.photos/300/200?random=6" class="card-img-top" alt="Kortti 3">
+      <div class="card-body">
+        <h5 class="card-title">Kortti 3</h5>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Haitari -->
+<h2 id="accordion-header" class="my-4">Haitari</h2>
+<div class="accordion" id="accordion">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="otsikko1">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#kohta1" aria-expanded="true" aria-controls="kohta1">
+        Kohta 1
+      </button>
+    </h2>
+    <div id="kohta1" class="accordion-collapse collapse show" aria-labelledby="otsikko1" data-bs-parent="#accordion">
+      <div class="accordion-body">Kukkuu!</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="otsikko2">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#kohta2" aria-expanded="false" aria-controls="kohta2">
+        Kohta 2
+      </button>
+    </h2>
+    <div id="kohta2" class="accordion-collapse collapse" aria-labelledby="otsikko2" data-bs-parent="#accordion">
+      <div class="accordion-body">Yllätyyyys!</div>
+    </div>
+  </div>
+</div>
+
+<!-- Taulukko -->
+<h2 id="taulukko" class="my-4">Taulukko</h2>
+<table class="table table-striped table-bordered">
+  <thead class="table-dark">
+    <tr>
+      <th>lempiruokia</th>
+      <th>ruoka</th>
+      <th>arvosana</th>
+      <th>kommentti</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>kevätkääryle</td>
+      <td>9/10</td>
+      <td>rapeaa</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>uunilohi</td>
+      <td>6/10</td>
+      <td>ei niin hyvää uudelleen lämmitettynä</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>sushi</td>
+      <td>8/10</td>
+      <td>nigirit parhaita</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Alerts -->
+<div class="alert alert-warning" role="alert">
+  Tässä on hälytys!
+</div>
+<div id="liveAlertPlaceholder"></div>
+
+<button type="button" class="btn btn-primary" id="liveAlertBtn">Show live alert</button>
+
+<script>
+const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+const appendAlert = (message, type) => {
+  const wrapper = document.createElement('div')
+  wrapper.innerHTML = [
+    `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+    `   <div>${message}</div>`,
+    '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+    '</div>'
+  ].join('')
+
+  alertPlaceholder.append(wrapper)
+}
+
+const alertTrigger = document.getElementById('liveAlertBtn')
+if (alertTrigger) {
+  alertTrigger.addEventListener('click', () => {
+    appendAlert('huomio, huomio tämähän toimii!', 'success')
+  })
+}
+</script>
+
+</body>
+</html>
