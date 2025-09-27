@@ -30,22 +30,17 @@
     </div>
   </div>
 </nav>
-
 <script>
-
-fetch('https://github.com/Juliawivan/Juliawivan.github.io/blob/main/tietue.json.JSON')
-.then(function (response){
-    return response.json ();
+fetch('jsontietue.JSON')
+.then(function (response) {
+    return response.json();
 })
 .then(function(responseJson){
     kerro(responseJson);
 })
-
 .catch(function(error){
-    document.getElementById("vastaus").innerHTML = "<p> tietoa ei pystytä hakemaan </p>"
-})
-
-
+    document.getElementById("vastaus").innerHTML = "<p>Tietoa ei pystytä hakemaan</p>";
+});
 
 function kerro(obj) {
   let tiedot = "<h1>" + obj.otsikko + "</h1><p>" + obj.kuvaus + "</p><hr>";
@@ -55,23 +50,23 @@ function kerro(obj) {
   tiedot += "Tunnus: " + obj.opintojakso.tunnus + "<br>";
   tiedot += "Opintopisteet: " + obj.opintojakso.opintopisteet + "<br>";
 
-  tiedot += "<h3>Sisältö</h3>";
-
+  tiedot += "<h3>Sisältö</h3><ul>";
   for (var i = 0; i < obj.opintojakso.sisalto.length; i++) {
     tiedot += "<li>" + obj.opintojakso.sisalto[i] + "</li>";
   }
   tiedot += "</ul>";
 
-
   tiedot += "<h3>Aiheet</h3>";
   for (let i = 0; i < obj.tekniikat.length; i++) {
-    tiedot += "<p>Aihe: " + obj.tekniikat[i].aihe + ":</b> ";
-    tiedot += "<a href='" + obj.tekniikat[i].linkki + "'>" + obj.tekniikat[i].linkki + "</a>" + "<br>";
+    tiedot += "<p>Aihe: " + obj.tekniikat[i].aihe + ": ";
+    tiedot += "<a href='" + obj.tekniikat[i].linkki + "'>" + obj.tekniikat[i].linkki + "</a></p>";
   }
-tiedot+= "</p>";
+
   document.getElementById("vastaus").innerHTML = tiedot;
 }
+</script>
 
+<div id="vastaus" class="container my-4"></div>
 </script>
 
 </body>
