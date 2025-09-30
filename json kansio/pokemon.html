@@ -31,33 +31,28 @@
   </div>
 </nav>
 
-<div id="teh1" class="container my-4">
-  <h2>Tehtävä 1.2</h2>
-  <div id="vastaus"></div>
-</div>
-
+<h1>Pokemon haku </h1>
+<p>
+    <input type="text" id="pokemonName" placeholder= "Enter pokemon name">
+    <button onclick="poke ()" >hae</button><br>
+    <div id= "nimi" >Kirjoita laatikkoon Pokemon nimi </div>
+    <p id= "kuva2"></p>
+</p>
 <script>
-fetch ('https://juliawivan.github.io/tietueTeh2.JSON')
-.then(function (response) {
-    return response.json();
-})
-.then(function(responseJson){
-    kerro(responseJson);
-})
-.catch(function(error){
-    document.getElementById("vastaus").innerHTML = "<p>Tietoa ei pystytä hakemaan</p>";
-});
-
-function kerro(obj) {
-    let tiedot  = "<h1>" + obj.otsikko + "</h1>";
-  tiedot += "lukumäärä " + obj.lukumäärä + "</br>";
-  tiedot += "nimet: " + obj.nimet + "<br>";
-  tiedot += "ajanjakso: " + obj.ajanjakso + "<br>";
-  tiedot += "kesto: " + obj.kesto + "<br>";
-  tiedot += "<p><img src='"  + obj.kuva + "' class='img-fluid rounded shadow'></p>";
-document.getElementById("vastaus").innerHTML = tiedot;
+function poke() {
+const pokeName = document.getElementById("pokemonName").value.toLowerCase();
+let name = documen.getElementById("pokemonName").value;
 }
+fetch('https://pokeapi.co/api/v2/pokemon/${pokeName}')
+.then (fuction (response) {
+return response.json();
+})
+.then(function (responseJSON) {
+pokekuva(responseJSON);
+})
+.catch(function (error){
+    document.getElementById("vastaus").innerHTML = "<p> Tietoa ei pystytä hakemaan</p>";
+})
 </script>
-
 </body>
 </html>
