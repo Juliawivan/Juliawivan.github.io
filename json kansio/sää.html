@@ -47,11 +47,21 @@ const säädata = {
     lampo:data.main.temp + " °C",
     tuuli: data.wind.speed + " m/s"
 };
-document.getElementById("saa").innerHTML = `<strong>Kuvaus:</strong> ${säädata.kuvaus} <br>
+
+ const nyt = new Date();
+    const tunnit = nyt.getHours().toString().padStart(2, '0');
+    const minuutit = nyt.getMinutes().toString().padStart(2, '0');
+    const aika = `${tunnit}:${minuutit}`;
+
+document.getElementById("saa").innerHTML =`<strong>Sää kello ${aika}</strong><br>
+<strong>Kuvaus:</strong> ${säädata.kuvaus} <br>
       <strong>Lämpötila:</strong> ${säädata.lampo} <br>
       <strong>Tuuli:</strong> ${säädata.tuuli}`;
 
-  }
+  } catch (error) {
+    console.error("Sään haku epäonnistui:", error);
+    document.getElementById("saa").innerHTML = "Sään hakeminen epäonnistui.";
+}
 }
 haeSaa();
 </script>
