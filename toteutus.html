@@ -22,7 +22,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav me-auto">
      <li class="nav-item"><a class="nav-link active" href="#">Etusivu Tehtävä 1</a></li>
-        <li class="nav-item"><a class="nav-link" href="#teh1">tehtävä 1.2</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://raw.githubusercontent.com/Juliawivan/Juliawivan.github.io/refs/heads/main/toteutus.html">tehtävä 1.2</a></li>
         <li class="nav-item"><a class="nav-link" href="#teh2">tehtävä 2 </a></li>
         <li class="nav-item"><a class="nav-link" href="#teh2">tehtävä 2.2. </a></li>
         <li class="nav-item"><a class="nav-link" href="#teh3">tehtävä 3 </a></li>
@@ -30,8 +30,14 @@
     </div>
   </div>
 </nav>
+
+<div id="teh1" class="container my-4">
+  <h2>Tehtävä 1.2</h2>
+  <div id="vastaus"></div>
+</div>
+
 <script>
-fetch (TÄHÄN LINKKI TIETUEESEEN)
+fetch ('https://juliawivan.github.io/tietueTeh2.JSON')
 .then(function (response) {
     return response.json();
 })
@@ -48,7 +54,8 @@ function kerro(obj) {
   tiedot += "nimet: " + obj.nimet + "<br>";
   tiedot += "ajanjakso: " + obj.ajanjakso + "<br>";
   tiedot += "kesto: " + obj.kesto + "<br>";
-  tiedot += "kuva: " + obj.kuva + "' class='img-fluid rounded shadow'></p>";
+  tiedot += "<p><img src='"  + obj.kuva + "' class='img-fluid rounded shadow'></p>";
+document.getElementById("vastaus").innerHTML = tiedot;
 }
 </script>
 
